@@ -15,7 +15,7 @@ def find_first_link(url):
     soup = bs4.BeautifulSoup(html, "html.parser")
 
     # This div contains the article's body
-    # (June 2017 Note: Body nested in two div tags)
+    # (Sept 2017: Body nested in two div tags)
     content_div = soup.find(
         id="mw-content-text").find(class_="mw-parser-output")
 
@@ -46,13 +46,13 @@ def find_first_link(url):
 
 def continue_crawl(search_history, target_url, max_steps=25):
     if search_history[-1] == target_url:
-        print("We've found the target article!")
+        print("Target ('Philosphy') article reached!")
         return False
     elif len(search_history) > max_steps:
-        print("The search has gone on suspiciously long, aborting search!")
+        print("Maximum (25) searches reached, search aborted.")
         return False
     elif search_history[-1] in search_history[:-1]:
-        print("We've arrived at an article we've already seen, aborting search!")
+        print("Arrived at an article already seen, search aborted.")
         return False
     else:
         return True
@@ -65,9 +65,9 @@ while continue_crawl(article_chain, target_url):
 
     first_link = find_first_link(article_chain[-1])
     if not first_link:
-        print("We've arrived at an article with no links, aborting search!")
+        print("Arrived at an article with no links, search aborted.")
         break
 
     article_chain.append(first_link)
 
-    time.sleep(.25)  # Slow things down so as to not hammer Wikipedia's servers
+    time.sleep(.25)  # Slow things down so as to not overload Wikipedia's servers
