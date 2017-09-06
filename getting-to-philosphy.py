@@ -70,4 +70,4 @@ while continue_crawl(article_chain, target_url):
 
     article_chain.append(first_link)
 
-    time.sleep(2)  # Slow things down so as to not hammer Wikipedia's servers
+    time.sleep(.25)  # Slow things down so as to not hammer Wikipedia's servers
