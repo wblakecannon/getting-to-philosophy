@@ -51,7 +51,7 @@ All this clicking is slow and tedious. This is something that can be done in Pyt
 This project will create a script to automate the task.
 
 ## Files
-* getting-to-philosphy.py (the first script to simply test a single URL)
+* getting-to-philosphy.py (the exploratory script to simply test a single URL)
 * scraping-py3.yml (Anaconda/Python environment)
 
 
