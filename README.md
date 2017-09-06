@@ -54,6 +54,9 @@ This project will create a script to automate the task.
 * getting-to-philosphy.py (the exploratory script to simply test a single URL)
 * scraping-py3.yml (Anaconda/Python environment)
 
+### getting-to-philosphy.py
+This is the exploratory script I built first. It simply checks a random Wikipedia article, follows the first real link, and lists the chain of articles. It's where I got the chains from the above description. If it doesn't find the Philosphy article in 25 links, it aborts. Also, if it determines a loop it aborts. This is the foundation for the more detailed analysis coming later.
+
 
 ## Future Features:
 Create a sample (or possibly even run the data on all of Wikipedia) and create some data analysis and visualizations to explore the validity of the phenomena.
