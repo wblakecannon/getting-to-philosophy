@@ -59,4 +59,4 @@ This is the exploratory script I built first. It simply checks a random Wikipedi
 
 
 ## Future Features:
-Create a sample (or possibly even run the data on all of Wikipedia) and create some data analysis and visualizations to explore the validity of the phenomena.
+Run the data on all of Wikipedia copied to local machine and conduct data analysis and visualizations to explore the validity of the phenomena.
