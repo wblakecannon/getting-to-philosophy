@@ -1,62 +1,27 @@
 # Getting to Philosophy
-Testing the phenomenon that clicking the first link in the main text of a Wikipedia article, and then repeating the process for subsequent articles, will usually lead to the 'Philosophy' article.
 
-https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy
+## Motivation
 
-A funny thing that many people have found in their explorations of Wikipedia is that if they go from page to page by clicking the first link in each article, they eventually find themselves at the 'Philosophy' article. Humorously, this phenomenon even has its own Wikipedia article (https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy).
+If a Wikipedia user goes from page to page by clicking the first ordinary link
+in each article, they usually find themselves at the '[Philosophy][PHIL]'
+article at some point. This phenomenon even has its own [Wikipedia
+page][GOTOPHIL].
+
+[PHIL]: https://en.wikipedia.org/wiki/Philosphy
+[GOTOPHIL]: https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy
 
 Here's an example chain:
 
-https://en.wikipedia.org/wiki/Theatre ->
-https://en.wikipedia.org/wiki/Fine_art -> 
-https://en.wikipedia.org/wiki/Aesthetics -> 
-https://en.wikipedia.org/wiki/Philosphy
+<https://en.wikipedia.org/wiki/Theatre> ->\
+<https://en.wikipedia.org/wiki/Fine_art> ->\
+<https://en.wikipedia.org/wiki/Aesthetics> ->\
+<https://en.wikipedia.org/wiki/Philosphy>
 
-So, the process is go to a Wikipedia page and find the first ordinary link in the main part of the text. Click through to the new page and repeat the process. Keep going until you reach philosophy, which seems to happen pretty often or until you get tired of clicking. Let's try the process again.
+## How to run
 
-https://en.wikipedia.org/wiki/Progressive_rock ->
-https://en.wikipedia.org/wiki/Genre ->
-https://en.wikipedia.org/wiki/French_language ->
-https://en.wikipedia.org/wiki/Romance_languages ->
-https://en.wikipedia.org/wiki/Vulgar_Latin ->
-https://en.wikipedia.org/wiki/Sociolect
-https://en.wikipedia.org/wiki/Sociolinguistics ->
-https://en.wikipedia.org/wiki/Society ->
-https://en.wikipedia.org/wiki/Social_group ->
-https://en.wikipedia.org/wiki/Social_science ->
-https://en.wikipedia.org/wiki/Discipline_(academia) ->
-https://en.wikipedia.org/wiki/Knowledge ->
-https://en.wikipedia.org/wiki/Fact ->
-https://en.wikipedia.org/wiki/Verificationism ->
-https://en.wikipedia.org/wiki/Philosphy
+```zsh
+pip install -r requirements.txt
+python philosophy.py # To expose the chain starting from a random page
 
-Sometimes, the chain can get stuck in a loop:
-
-https://en.wikipedia.org/wiki/Hydrological_cycle ->
-https://en.wikipedia.org/wiki/Water ->
-https://en.wikipedia.org/wiki/Chemical_substance ->
-https://en.wikipedia.org/wiki/Matter ->
-https://en.wikipedia.org/wiki/Classical_physics ->
-https://en.wikipedia.org/wiki/Physics ->
-https://en.wikipedia.org/wiki/Ancient_Greek ->
-https://en.wikipedia.org/wiki/Greek_language ->
-https://en.wikipedia.org/wiki/Modern_Greek ->
-https://en.wikipedia.org/wiki/Colloquialism ->
-https://en.wikipedia.org/wiki/Vernacular ->
-https://en.wikipedia.org/wiki/Dialect ->
-https://en.wikipedia.org/wiki/Vernacular
-
-All this clicking is slow and tedious. This is something that can be done in Python as a web scraper.
-
-This project will create a script to automate the task.
-
-## Files
-* getting-to-philosphy.py (the exploratory script to simply test a single URL)
-* scraping-py3.yml (Anaconda/Python environment)
-
-### getting-to-philosphy.py
-This is the exploratory script I built first. It simply checks a random Wikipedia article, follows the first real link, and lists the chain of articles. It's where I got the chains from the above description. If it doesn't find the Philosphy article in 25 links, it aborts. Also, if it determines a loop it aborts. This is the foundation for the more detailed analysis coming later.
-
-
-## Future Features:
-Run the data on all of Wikipedia copied to local machine and conduct data analysis and visualizations to explore the validity of the phenomena.
+python philosophy.py -h # To inspect more options
+```
