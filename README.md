@@ -12,10 +12,19 @@ page][GOTOPHIL].
 
 Here's an example chain:
 
-<https://en.wikipedia.org/wiki/Theatre> ->\
-<https://en.wikipedia.org/wiki/Fine_art> ->\
-<https://en.wikipedia.org/wiki/Aesthetics> ->\
-<https://en.wikipedia.org/wiki/Philosphy>
+<https://en.wikipedia.org/wiki/Denmark> ->\
+<https://en.wikipedia.org/wiki/Danish_language> ->\
+<https://en.wikipedia.org/wiki/North_Germanic_languages> ->\
+<https://en.wikipedia.org/wiki/Germanic_languages> ->\
+<https://en.wikipedia.org/wiki/Indo-European_languages> ->\
+<https://en.wikipedia.org/wiki/Language_family> ->\
+<https://en.wikipedia.org/wiki/Language> ->\
+<https://en.wikipedia.org/wiki/Communication> ->\
+<https://en.wikipedia.org/wiki/Information> ->\
+<https://en.wikipedia.org/wiki/Abstraction> ->\
+<https://en.wikipedia.org/wiki/Rule_of_inference> ->\
+<https://en.wikipedia.org/wiki/Philosophy_of_logic> ->\
+<https://en.wikipedia.org/wiki/Philosophy> ->
 
 ## How to run
 
